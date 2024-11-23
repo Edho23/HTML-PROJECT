@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .article-list {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .article-item {
+            background: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .article-item h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin - Manage Articles</h1>
+    <form id="articleForm">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="text" id="date" placeholder="Date (e.g., 5 May 2024)" required />
+        <input type="text" id="image" placeholder="Image URL (optional)" />
+        <textarea id="description" placeholder="Description" rows="3"></textarea>
+        <textarea id="content" placeholder="Content (optional)" rows="5"></textarea>
+        <button type="submit">Add Article</button>
+    </form>
+
+    <h2>Existing Articles</h2>
+    <div class="article-list" id="articleList">
+        <!-- Daftar artikel akan ditampilkan di sini -->
+    </div>
+
+    <script>
+        const articleForm = document.getElementById("articleForm");
+        const articleList = document.getElementById("articleList");
+
+        // Ambil data artikel dari localStorage
+        let articles = JSON.parse(localStorage.getItem("articles")) || [];
+
+        // Fungsi untuk menampilkan daftar artikel
+        function renderArticles() {
+            articleList.innerHTML = ""; // Kosongkan daftar artikel
+
+            if (articles.length === 0) {
+                articleList.innerHTML = "<p>No articles available.</p>";
+                return;
+            }
+
+            articles.forEach((article, index) => {
+                const articleItem = document.createElement("div");
+                articleItem.className = "article-item";
+
+                articleItem.innerHTML = `
+                    <h4>${article.title}</h4>
+                    <button class="delete-btn" onclick="deleteArticle(${index})">Delete</button>
+                `;
+
+                articleList.appendChild(articleItem);
+            });
+        }
+
+        // Fungsi untuk menambah artikel
+        articleForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const newArticle = {
+                title: document.getElementById("title").value,
+                author: document.getElementById("author").value,
+                date: document.getElementById("date").value,
+                image: document.getElementById("image").value,
+                description: document.getElementById("description").value,
+                content: document.getElementById("content").value,
+            };
+
+            articles.push(newArticle);
+            localStorage.setItem("articles", JSON.stringify(articles));
+
+            alert("Article added!");
+            this.reset();
+            renderArticles();
+        });
+
+        // Fungsi untuk menghapus artikel
+        function deleteArticle(index) {
+            if (confirm("Are you sure you want to delete this article?")) {
+                articles.splice(index, 1);
+                localStorage.setItem("articles", JSON.stringify(articles));
+                renderArticles();
+            }
+        }
+
+        // Tampilkan daftar artikel saat halaman dimuat
+        renderArticles();
+    </script>
+</body>
+</html>

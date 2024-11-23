@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+        }
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .card, .main-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .card img, .main-card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content, .main-card-content {
+            padding: 15px;
+        }
+        .card-content h3, .main-card-content h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .main-card-content h2 {
+            font-size: 24px;
+        }
+        .card-content p, .main-card-content p {
+            font-size: 14px;
+            color: #6c757d;
+            margin: 0;
+        }
+        .main-card-content p {
+            font-size: 16px;
+        }
+        .meta {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+        .main-card-content .meta {
+            font-size: 14px;
+        }
+        .meta i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column" id="left-column">
+            <!-- Artikel kiri akan ditambahkan secara dinamis -->
+        </div>
+        <div class="main-card" id="main-card">
+            <!-- Artikel utama akan ditambahkan secara dinamis -->
+        </div>
+        <div class="right-column" id="right-column">
+            <!-- Artikel kanan akan ditambahkan secara dinamis -->
+        </div>
+    </div>
+
+    <script>
+        // Ambil data artikel dari localStorage
+        const articles = JSON.parse(localStorage.getItem("articles")) || [];
+
+        // Fungsi untuk menampilkan artikel dinamis
+        function renderArticles() {
+            const leftColumn = document.getElementById("left-column");
+            const mainCard = document.getElementById("main-card");
+            const rightColumn = document.getElementById("right-column");
+
+            // Kosongkan kolom sebelum menyisipkan artikel baru
+            leftColumn.innerHTML = "";
+            mainCard.innerHTML = "";
+            rightColumn.innerHTML = "";
+
+            // Tampilkan artikel dinamis
+            articles.forEach((article, index) => {
+                const cardHTML = `
+                    <div class="card">
+                        <img src="${article.image || 'https://placehold.co/300x200'}" alt="${article.title}">
+                        <div class="card-content">
+                            <h3>${article.title}</h3>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i> ${article.date}
+                                <i class="fas fa-user" style="margin-left: 10px;"></i> By ${article.author}
+                            </div>
+                            <p>${article.description || ""}</p>
+                        </div>
+                    </div>
+                `;
+
+                if (index === 0) {
+                    // Artikel utama
+                    mainCard.innerHTML = `
+                        <img src="${article.image || 'https://placehold.co/600x400'}" alt="${article.title}">
+                        <div class="main-card-content">
+                            <h2>${article.title}</h2>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i> ${article.date}
+                                <i class="fas fa-user" style="margin-left: 10px;"></i> By ${article.author}
+                            </div>
+                            <p>${article.content || ""}</p>
+                            <p><strong>READ MORE</strong></p>
+                        </div>
+                    `;
+                } else if (index % 2 === 0) {
+                    // Artikel ke kolom kiri
+                    leftColumn.innerHTML += cardHTML;
+                } else {
+                    // Artikel ke kolom kanan
+                    rightColumn.innerHTML += cardHTML;
+                }
+            });
+        }
+
+        // Panggil fungsi render
+        renderArticles();
+    </script>
+</body>
+</html>
