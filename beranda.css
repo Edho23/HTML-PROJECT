@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Public Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding: 0 25px;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 100px;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 25px;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.kanan-nav {
+    display: flex;
+    align-items: center;
+}
+
+header button {
+    width: 100px;
+    height: 30px;
+    background-color: #FD5F00;
+    color: #F6F6E9;
+    border: 1px solid #FD5F00;
+    padding: 0px 5px;
+}
+
+header #login-btn {
+    background-color: white;
+    color: #FD5F00;
+    border: 1px solid #FD5F00;
+}
+
+.loginAkun-btn button:hover {
+    background-color: #f67525;
+    color: white;
+    border: 1px solid #f67525;
+}
+
+.loginAkun-btn #login-btn:hover {
+    background-color: #f67525;
+    color: white;
+    border: 1px solid #f67525;
+}
+
+.kanan-nav img {
+    width: 20px;
+    margin-right: 45px;
+}
+
+.kanan-nav .notif {
+    margin-right: 50px;
+}
+
+.pencarian {
+    display: none;
+}
+
+.pencarian-btn {
+    display: none;
+}
+
+
+/* main style */
+
+.judul-dan-cari {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pencarian-berita-beranda {
+    margin: 0;
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.pencarian-berita-beranda .cari-input {
+    width: 310px;
+    padding: 11px 10px;
+    margin-left: 55%;
+    border-radius: 0;
+    border: 1.5px solid #113F67;
+}
+
+.cari-input:focus {
+    border: 2.5px solid #113F67;
+    outline: none;
+    padding: 10px 10px;
+}
+
+.cari-btn img {
+    width: 40px;
+    border: 1px solid #113F67;
+    background-color: #113F67;
+    padding: 9px;
+    margin-left: 130px;
+}
+
+.cari-btn img:hover {
+    background-color: #005792;
+}
+
+.cari-btn img:active {
+    background-color: #113F67;
+}
+
+.layout {
+    display: inline;
+    margin: 30px 0;
+}
+
+main h1 {
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: "Noto Sans Lao", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+main h1 b {
+    color: #FD5F00;
+    font-family: "Noto Sans Lao", sans-serif;
+}
+
+.konten-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    margin: 0 25px;
+}
+
+.genre a {
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.genre {
+    margin-bottom: 10px;
+    background-color: #FD5F00;
+    padding: 5px 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.subjudul-konten p b {
+    font-size: 35px;
+}
+
+.subjudul-konten .penulis-tgl {
+    font-size: 12px;
+    color: #999;
+    margin: 10px 0;
+}
+
+.penulis-tgl label b {
+    color: black;
+}
+
+.ringkasan {
+    color: gray;
+    font-size: 15px;
+}
+
+.ringkasan p b {
+    font-size: 15px;
+    color: black;
+}
+
+.layout img {
+    width: 500px;
+    border-radius: 5px;
+}
+
+.trending-card {
+    border-top: 1px solid gainsboro;
+}
+
+.trending-layout .trending-card {
+    margin: 5px 0;
+    padding-top: 5px;
+}
+
+.trending-layout h3 {
+    font-size: 24px;
+    color: #005792;
+}
+
+.trending-layout .trending-card a {
+    text-decoration: none;
+    color: #005792;
+    font-size: 14px;
+}
+
+.trending-card .nomor-genre {
+    font-size: 10px;
+    color: rgb(186, 185, 185);
+}
+
+.trending-card .semua-trending a {
+    font-size: 10px;
+    color: #113F67;
+    border-left: 3px solid #113F67;
+    padding-left: 5px;
+}
+
+.trending-card .semua-trending {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.konten-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 50px 25px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.panel .penulis-tgl-konten label {
+    color: black;
+    margin-right: 20px;
+}
+
+.panel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.panel .subjudul-konten-2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.panel .ringkasan-konten-2 {
+  font-size: 14px;
+  color: #666;
+  margin: 0 15px 15px;
+}
+
+.panel .penulis-tgl-konten {
+  font-size: 12px;
+  margin: 0 15px 15px;
+}
+
+.panel .penulis-tgl-konten label {
+    color: #999;
+}
+
+.panel .penulis-tgl-konten label b {
+    color: black;
+}
+
+.kontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    margin: 0 25px;
+}
+
+.konten-editor-pick h1 {
+    text-align: center;
+}
+
+.konten-editor-pick h1 b {
+    color: #FD5F00;
+}
+
+.gambar-kanan, .gambar-kiri {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card img, .main-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.main-card img {
+    height: 350px;
+}
+
+.card img {
+    height: 175px;
+}
+
+.card-konten, .main-card-konten {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-konten h3, .main-card-konten h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.main-card-konten h2 {
+    font-size: 24px;
+}
+
+.card-konten p, .main-card-konten p {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}
+
+.main-card-konten p b {
+    color: black;
+}
+
+
+.penulis-tgl-konten {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.penulis-tgl-konten label {
+    color: #999;
+    margin: 0px 10px;
+}
+
+.penulis-tgl-konten label b {
+    color: black;
+}
+
+
+/* style story: war */
+.kontainer-story {
+    display: flex;
+    margin: 50px 25px;
+}
+
+.konten-kanan img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.konten-kanan {
+    width: 40%;
+}
+
+.konten-kiri {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-right: 50px;
+}
+
+.konten-kiri h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-decoration: underline #FD5F00;
+    text-underline-offset: 15px;
+}
+
+.konten-kiri p b {
+    font-size: 25px;
+}
+
+.konten-kiri .tgl-penulis-story p {
+    font-size: smaller;
+}
+
+.tgl-penulis-story {
+    display: flex;
+    color: rgb(176, 173, 173);
+    border-top: 1px solid #e3e1e1;
+    border-bottom: 1px solid #e3e1e1;
+    padding: 5px 0px;
+    margin-right: 45px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.konten-kiri .nama-jabatan .jabatan {
+    font-size: 10px;
+    padding: 5px 0;
+}
+
+.tgl-penulis-story .tgl-penulis {
+    padding: 10px 0;
+    font-size: smaller;
+}
+
+.tgl-penulis-story .nama-jabatan {
+    margin-right: 25px;
+}
+
+.tgl-penulis-story .nama-jabatan .nama-penulis {
+    color: black;
+}
+
+.konten-kiri .ringkasan-story-konten {
+    color: gray;
+    padding-right: 50px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.konten-kiri .ringkasan-story-konten b {
+    font-size: 15px;
+    color: black;
+}
+
+
+
+/* Layout Panel 'Lainnya' */
+.grid-conten {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    margin: 0px 25px;
+}
+
+.grid-card-konten {
+    margin-bottom: 30px;
+}
+
+.grid-card-konten img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.grid-card-konten p {
+    margin-right: 10px;
+}
+
+/* brekpoint nav-bar */
+
+@media (max-width: 865px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 90%;
+        background-color: white;
+        z-index: 1000;
+        margin-left: 20px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .pencarian {
+        display: flex;
+        width: 85%;
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .labelCari {
+        display: flex;
+        width: 100%;
+    }
+
+    .pencarian-btn {
+        display: inline;
+        border-radius: 2px;
+        margin-left: 5px;
+        padding: 10px 0px;
+        background-color: orangered;
+        border: 1px solid gray;
+        height: 100%;
+    }
+
+    header nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid gray;
+        margin: 0;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    .kanan-nav button {
+        margin-right: 5px;
+    }
+
+    .ikon-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        cursor: pointer;
+    }
+
+    .baris {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 2px 0;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+@media (max-width: 894px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 90%;
+        background-color: white;
+        z-index: 1000;
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .pencarian {
+        display: flex;
+        width: 85%;
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .labelCari {
+        display: flex;
+    }
+
+    .pencarian-btn {
+        display: inline;
+        border-radius: 2px;
+        margin-left: 5px;
+        padding: 10px 0px;
+        background-color: orangered;
+        border: 1px solid gray;
+        height: 100%;
+    }
+
+    header nav a {
+        padding-bottom: 10px;
+        border-bottom: 1px solid gray;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    .kanan-nav {
+        display: flex;
+    }
+
+    .ikon-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+
+    .kanan-nav img {
+        margin-right: 25px;
+        display: none;
+    }
+
+    .kanan-nav .notif {
+        margin-right: -10px;
+    }
+
+    .login-btn {
+        padding: 0px 20px;
+        margin-right: 20px;
+    }
+
+    .baris {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 2px 0;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+@media (max-width: 1024px) {
+    .notif {
+        display: none;
+    }
+
+    .kanan-nav img {
+        margin-right: 20px;
+    }
+
+    header nav a {
+        margin: 10px;
+    }
+
+    .kanan-nav .searching {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 1057px) {
+    .kanan-nav {
+        margin-left: 15px;
+    }
+
+    .kanan-nav img {
+        margin-right: 20px;
+    }
+
+    .login-btn {
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 1192px) {
+    header nav a {
+        margin: 15px;
+    }
+
+    .login-btn {
+        margin-right: 25px;
+    }
+}
+
+/* Breakpoint konten hotline & konten-2 */
+
+@media (max-width: 768px) {
+    .konten-1 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .subjudul-konten p b {
+      font-size: 20px;
+    }
+  
+    .gambarHotline {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    .ringkasan p b {
+        font-size: smaller;
+    }
+
+    .konten-2 {
+        grid-template-columns: 1fr;
+      }
+    
+      .panel img {
+        height: 180px;
+      }
+    
+      .panel .subjudul-konten-2 {
+        font-size: 16px;
+      }
+    
+      .panel .ringkasan-konten-2 {
+        font-size: 13px;
+      }
+    
+      .panel .penulis-tgl-konten {
+        font-size: 11px;
+      }
+
+  }
+
+  @media (max-width: 1023px) {
+    .konten-1 {
+        flex-direction: column-reverse;
+    }
+
+    .gambarHotline {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .konten-2 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
