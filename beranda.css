@@ -484,6 +484,94 @@ main h1 b {
     margin-right: 10px;
 }
 
+
+/* Style Footer */
+.konten-footer {
+    border-top: 2px solid gray;
+    border-width: 100%;
+    margin: 20px 0px;
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.konten-footer .bagian-kiri img {
+    width: 100px;
+    margin-left: 100px;
+}
+
+.konten-footer .bagian-kiri p {
+    font-size: 12px;
+    color: gray;
+    margin-left: 100px;
+    letter-spacing: 1px;
+}
+
+.bagian-kiri p {
+    margin-right: 150px;
+}
+
+.footer-tengah {
+    margin-top: 60px;
+}
+
+.footer-tengah p {
+    margin-bottom: 20px;
+    color: #474747;
+    font-size: 12px;
+}
+
+.f-tengah {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+}
+
+.f-tengah a {
+    margin-right: 5px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+}
+
+
+.konten-footer .bagian-kanan {
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+.bagian-kanan p {
+    margin-bottom: 20px;
+    color: #474747;
+    font-size: 12px;
+}
+
+.bagian-kanan .social-media {
+    display: grid;
+}
+
+.bagian-kanan .social-media a {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #474747;
+}
+
+.gambar-sosmed {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a img {
+    width: 24px;
+    height: 24px;
+}
+
+
 /* brekpoint nav-bar */
 
 @media (max-width: 865px) {
