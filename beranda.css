@@ -33,16 +33,32 @@ header {
 nav {
     display: flex;
     align-items: center;
+    margin-left: 15px;
 }
 
 header nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(51, 49, 49);
     margin: 0 25px;
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
+
+header .kategori:hover {
+    color: #FD5F00;
+}
+
+header #beranda {
+    color: #FD5F00;
+    border-bottom: 2px solid #FD5F00;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+header .kategori:active {
+    color: black;
 }
 
 .kanan-nav {
@@ -69,12 +85,25 @@ header #login-btn {
     background-color: #f67525;
     color: white;
     border: 1px solid #f67525;
+    cursor: pointer;
 }
 
 .loginAkun-btn #login-btn:hover {
     background-color: #f67525;
     color: white;
     border: 1px solid #f67525;
+}
+
+.loginAkun-btn #login-btn:active {
+    color: white;
+    background-color: #FD5F00;
+    border: 1px solid #FD5F00;
+}
+
+.loginAkun-btn button:active {
+    background-color: #FD5F00;
+    color: white;
+    border: 1px solid #FD5F00;
 }
 
 .kanan-nav img {
@@ -135,10 +164,12 @@ header #login-btn {
 
 .cari-btn img:hover {
     background-color: #005792;
+    cursor: pointer;
 }
 
 .cari-btn img:active {
     background-color: #113F67;
+    cursor: pointer;
 }
 
 .layout {
@@ -166,6 +197,25 @@ main h1 b {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
     margin: 0 25px;
+}
+
+.subjudul-konten .judul-hotline {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subjudul-konten .judul-hotline:hover {
+    transform: translateY(-10px) scale(1.05);
+    cursor: pointer;
+}
+
+.subjudul-konten .ringkasan {
+    cursor: pointer;
+}
+
+.subjudul-konten .ringkasan b:hover {
+    text-decoration: underline;
+    padding-top: 5px;
 }
 
 .genre a {
@@ -213,6 +263,10 @@ main h1 b {
     border-radius: 5px;
 }
 
+.layout .gambarHotline:hover {
+    cursor: pointer;
+}
+
 .trending-card {
     border-top: 1px solid gainsboro;
 }
@@ -250,6 +304,17 @@ main h1 b {
     margin-top: 10px;
 }
 
+.trending-card a:hover {
+    color: #FD5F00;
+    text-decoration: underline;
+}
+
+.trending-card .semua-trending a:hover {
+    border-left: 3px solid #FD5F00;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
 .konten-2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -264,6 +329,17 @@ main h1 b {
   background-color: #f8f8f8;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.panel .subjudul-konten-2:hover {
+    text-decoration: underline;
 }
 
 .panel .penulis-tgl-konten label {
@@ -311,6 +387,20 @@ main h1 b {
     margin: 0 25px;
 }
 
+.kontainer .card {
+    transition: transform 0.3s ease
+}
+
+.kontainer .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.kontainer .card h3:hover {
+    text-decoration: underline;
+}
+
 .konten-editor-pick h1 {
     text-align: center;
 }
@@ -331,6 +421,19 @@ main h1 b {
     object-fit: cover;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.main-card {
+    transition: transform 0.3s ease;
+}
+
+.main-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.main-card h2:hover {
+    text-decoration: underline;
 }
 
 .main-card img {
