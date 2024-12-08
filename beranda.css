@@ -33,16 +33,32 @@ header {
 nav {
     display: flex;
     align-items: center;
+    margin-left: 15px;
 }
 
 header nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(51, 49, 49);
     margin: 0 25px;
     font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
+
+header .kategori:hover {
+    color: #FD5F00;
+}
+
+header #beranda {
+    color: #FD5F00;
+    border-bottom: 2px solid #FD5F00;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+header .kategori:active {
+    color: black;
 }
 
 .kanan-nav {
@@ -69,12 +85,25 @@ header #login-btn {
     background-color: #f67525;
     color: white;
     border: 1px solid #f67525;
+    cursor: pointer;
 }
 
 .loginAkun-btn #login-btn:hover {
     background-color: #f67525;
     color: white;
     border: 1px solid #f67525;
+}
+
+.loginAkun-btn #login-btn:active {
+    color: white;
+    background-color: #FD5F00;
+    border: 1px solid #FD5F00;
+}
+
+.loginAkun-btn button:active {
+    background-color: #FD5F00;
+    color: white;
+    border: 1px solid #FD5F00;
 }
 
 .kanan-nav img {
@@ -135,10 +164,12 @@ header #login-btn {
 
 .cari-btn img:hover {
     background-color: #005792;
+    cursor: pointer;
 }
 
 .cari-btn img:active {
     background-color: #113F67;
+    cursor: pointer;
 }
 
 .layout {
@@ -166,6 +197,25 @@ main h1 b {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
     margin: 0 25px;
+}
+
+.subjudul-konten .judul-hotline {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subjudul-konten .judul-hotline:hover {
+    transform: translateY(-10px) scale(1.05);
+    cursor: pointer;
+}
+
+.subjudul-konten .ringkasan {
+    cursor: pointer;
+}
+
+.subjudul-konten .ringkasan b:hover {
+    text-decoration: underline;
+    padding-top: 5px;
 }
 
 .genre a {
@@ -211,6 +261,11 @@ main h1 b {
 .layout img {
     width: 500px;
     border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.layout .gambarHotline:hover {
+    cursor: pointer;
 }
 
 .trending-card {
@@ -250,6 +305,17 @@ main h1 b {
     margin-top: 10px;
 }
 
+.trending-card a:hover {
+    color: #FD5F00;
+    text-decoration: underline;
+}
+
+.trending-card .semua-trending a:hover {
+    border-left: 3px solid #FD5F00;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
 .konten-2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -264,6 +330,17 @@ main h1 b {
   background-color: #f8f8f8;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.panel .subjudul-konten-2:hover {
+    text-decoration: underline;
 }
 
 .panel .penulis-tgl-konten label {
@@ -311,6 +388,20 @@ main h1 b {
     margin: 0 25px;
 }
 
+.kontainer .card {
+    transition: transform 0.3s ease
+}
+
+.kontainer .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.kontainer .card h3:hover {
+    text-decoration: underline;
+}
+
 .konten-editor-pick h1 {
     text-align: center;
 }
@@ -331,6 +422,28 @@ main h1 b {
     object-fit: cover;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.main-card {
+    transition: transform 0.3s ease;
+}
+
+.main-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.main-card h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-card p:hover {
+    cursor: pointer;
+}
+
+.main-card img:hover {
+    cursor: pointer;
 }
 
 .main-card img {
@@ -383,15 +496,26 @@ main h1 b {
 }
 
 
-/* style story: war */
+/* style story: otomotif */
+.story-war {
+    overflow: hidden;
+}
+
 .kontainer-story {
     display: flex;
     margin: 50px 25px;
+    transition: transform 0.3s ease;
 }
 
 .konten-kanan img {
     width: 100%;
     border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.story-war:hover .konten-kanan img {
+    filter: brightness(0.8);
+    cursor: pointer;
 }
 
 .konten-kanan {
@@ -412,8 +536,25 @@ main h1 b {
     text-underline-offset: 15px;
 }
 
+.konten-kiri h1:hover {
+    color: #113F67;
+}
+
+.konten-kiri:hover {
+    cursor: pointer;
+    color: #113F67;
+}
+
+.konten-kiri:hover + img {
+    filter: brightness(0.9);
+}
+
 .konten-kiri p b {
     font-size: 25px;
+}
+
+.konten-kiri p b:hover {
+    text-decoration: underline;
 }
 
 .konten-kiri .tgl-penulis-story p {
@@ -471,6 +612,18 @@ main h1 b {
     margin: 0px 25px;
 }
 
+.semua-class h1 b {
+    color: black;
+}
+
+.semua-class:hover h1 b {
+    color: #113F67;
+}
+
+.semua-class:hover h1 {
+    color: #005792;
+}
+
 .grid-card-konten {
     margin-bottom: 30px;
 }
@@ -484,13 +637,42 @@ main h1 b {
     margin-right: 10px;
 }
 
+.grid-card-konten:hover {
+    cursor: pointer;
+    color: #005792;
+}
+
+.grid-card-konten:hover img {
+    filter: brightness(0.8);
+}
+
+.semua-berita-btn .card-btn-semua-berita {
+    text-align: center;
+}
+
+.card-btn-semua-berita button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    border: 1px solid #FD5F00;
+    color: #FD5F00;
+    background-color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-btn-semua-berita button:hover {
+    background-color: #FD5F00;
+    color: white;
+    cursor: pointer;
+}
+
 
 /* Style Footer */
 .konten-footer {
-    border-top: 2px solid gray;
+    border-top: 1px solid gray;
     border-width: 100%;
     margin: 20px 0px;
-    margin-top: 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -535,6 +717,11 @@ main h1 b {
     font-size: 12px;
 }
 
+.f-tengah a:hover {
+    text-decoration: underline;
+    color: #113F67;
+}
+
 
 .konten-footer .bagian-kanan {
     margin-top: 60px;
@@ -559,6 +746,11 @@ main h1 b {
 .social-media a {
     text-decoration: none;
     color: #474747;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+    color: #005792;
 }
 
 .gambar-sosmed {
