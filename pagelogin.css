@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Public Sans", sans-serif;
+    position: relative;
+    background-color: #ccc;
+}
+
+.kembali-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.kembali-btn button {
+    padding: 5px 20px;
+    border: 1px solid white;
+    color: #FD5F00;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.kembali-btn button:hover {
+    color: white;
+    background-color: #FD5F00;
+    border: 1px solid #FD5F00;
+    cursor: pointer;
+}
+
+.kembali-btn button:active {
+    color: #FD5F00;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.kontainer .bungkus-page-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 400px;
+    margin-top: 50px;
+}
+
+.bungkus-page-login .teks p {
+    color: #226597;
+    width: 250px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.email-password input {
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 1px solid gray;
+    margin: 10px 0;
+}
+
+.password-field img {
+    position: absolute;
+    top: 368px;
+    left: 750px;
+    cursor: pointer;
+    width: 20px;
+}
+
+.password-field img:hover {
+    filter: none; /* Warna asli saat hover */
+}
+
+.email-password input:focus {
+    border: 2px solid #FD5F00;
+    outline: none;
+    margin: 8px 0;
+    padding: 10px 18px;
+}
+
+.kontainer .login-btn button {
+    padding: 8px 0;
+    width: 244.67px;
+    border-radius: 5px;
+    border: 1px solid #FD5F00;
+    background-color: #FD5F00;
+    color: white;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login-btn button:hover {
+    background-color: white;
+    color: #FD5F00;
+    border: 1px solid #FD5F00;
+    cursor: pointer;
+}
+
+.login-btn button:active {
+    background-color: #FD5F00;
+    color: white;
+    border: 1px solid #FD5F00;
+}
+
+.daftar-lupaPassword {
+    font-size: 12px;
+    margin-left: 45px;
+}
+
+.daftar-lupaPassword p a {
+    text-decoration: none;
+    color: #226597;
+}
+
+.daftar-lupaPassword p a:hover {
+    text-decoration: underline;
+}
