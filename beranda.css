@@ -261,6 +261,11 @@ main h1 b {
 .layout img {
     width: 500px;
     border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.layout .gambarHotline:hover {
+    cursor: pointer;
 }
 
 .layout .gambarHotline:hover {
@@ -430,11 +435,15 @@ main h1 b {
 .main-card:hover {
     transform: translateY(-5px) scale(1.05);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .main-card h2:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
+
+
 
 .main-card img {
     height: 350px;
@@ -486,15 +495,26 @@ main h1 b {
 }
 
 
-/* style story: war */
+/* style story: otomotif */
+.story-war {
+    overflow: hidden;
+}
+
 .kontainer-story {
     display: flex;
     margin: 50px 25px;
+    transition: transform 0.3s ease;
 }
 
 .konten-kanan img {
     width: 100%;
     border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.story-war:hover .konten-kanan img {
+    filter: brightness(0.8);
+    cursor: pointer;
 }
 
 .konten-kanan {
@@ -515,8 +535,25 @@ main h1 b {
     text-underline-offset: 15px;
 }
 
+.konten-kiri h1:hover {
+    color: #113F67;
+}
+
+.konten-kiri:hover {
+    cursor: pointer;
+    color: #113F67;
+}
+
+.konten-kiri:hover + img {
+    filter: brightness(0.9);
+}
+
 .konten-kiri p b {
     font-size: 25px;
+}
+
+.konten-kiri p b:hover {
+    text-decoration: underline;
 }
 
 .konten-kiri .tgl-penulis-story p {
@@ -574,6 +611,18 @@ main h1 b {
     margin: 0px 25px;
 }
 
+.semua-class h1 b {
+    color: black;
+}
+
+.semua-class:hover h1 b {
+    color: #113F67;
+}
+
+.semua-class:hover h1 {
+    color: #005792;
+}
+
 .grid-card-konten {
     margin-bottom: 30px;
 }
@@ -587,13 +636,42 @@ main h1 b {
     margin-right: 10px;
 }
 
+.grid-card-konten:hover {
+    cursor: pointer;
+    color: #005792;
+}
+
+.grid-card-konten:hover img {
+    filter: brightness(0.8);
+}
+
+.semua-berita-btn .card-btn-semua-berita {
+    text-align: center;
+}
+
+.card-btn-semua-berita button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    border: 1px solid #FD5F00;
+    color: #FD5F00;
+    background-color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-btn-semua-berita button:hover {
+    background-color: #FD5F00;
+    color: white;
+    cursor: pointer;
+}
+
 
 /* Style Footer */
 .konten-footer {
-    border-top: 2px solid gray;
+    border-top: 1px solid gray;
     border-width: 100%;
     margin: 20px 0px;
-    margin-top: 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -638,6 +716,11 @@ main h1 b {
     font-size: 12px;
 }
 
+.f-tengah a:hover {
+    text-decoration: underline;
+    color: #113F67;
+}
+
 
 .konten-footer .bagian-kanan {
     margin-top: 60px;
@@ -662,6 +745,11 @@ main h1 b {
 .social-media a {
     text-decoration: none;
     color: #474747;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+    color: #005792;
 }
 
 .gambar-sosmed {
