@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Artikel</title>
+  <link rel="stylesheet" href="edit_artikel.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Dashboard</h3>
+      <ul>
+        <li><a href="#">Profil Saya</a></li>
+        <li><a href="#">Tambah Artikel</a></li>
+        <li><a href="#">Edit Artikel</a></li>
+        <li><a href="#">Statistik</a></li>
+        <li><a href="#">Artikel Saya</a></li>
+        <li><a href="#">Hapus Artikel</a></li>
+      </ul>
+      <a href="#" class="logout">Logout</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h2>Edit Artikel</h2>
+      <form id="edit-article-form" class="article-form">
+        <div class="form-group">
+          <label for="article-id">Pilih Artikel</label>
+          <select id="article-id" name="article-id" required>
+            <option value="">Pilih Artikel untuk Diedit</option>
+            <option value="1">Artikel 1</option>
+            <option value="2">Artikel 2</option>
+            <option value="3">Artikel 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edit-title">Judul Artikel</label>
+          <input type="text" id="edit-title" name="edit-title" placeholder="Masukkan judul artikel" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-content">Isi Artikel</label>
+          <textarea id="edit-content" name="edit-content" rows="10" placeholder="Tulis isi artikel Anda" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-category">Kategori</label>
+          <select id="edit-category" name="edit-category" required>
+            <option value="">Pilih Kategori</option>
+            <option value="teknologi">Teknologi</option>
+            <option value="pendidikan">Pendidikan</option>
+            <option value="kesehatan">Kesehatan</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+        </div>
+        <script src="edit_artikel.js"></script>
+        <button type="submit" class="btn-submit">Simpan Perubahan
